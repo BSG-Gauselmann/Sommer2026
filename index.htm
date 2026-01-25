@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Anmeldung zum BSG Gauselmann Sportwochenende Himmelfahrt 2026">
-    <!-- Favicon (Kleines Zelt-Icon im Browser-Tab) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛺</text></svg>">
     
     <title>BSG Gauselmann - Sportwochenende 2026</title>
@@ -45,7 +44,6 @@
         }
         header h1 { margin: 0; font-size: 2.2rem; }
         
-        /* Veranstaltungssubline */
         .organizer-line {
             font-size: 0.95rem;
             margin-top: 0.2rem;
@@ -58,7 +56,7 @@
         header p { font-size: 1.2rem; margin-top: 0.5rem; color: var(--accent-color); font-weight: bold; margin-bottom: 0; }
         header span { display: block; margin-top: 5px; font-size: 0.95rem; opacity: 0.9; }
 
-        /* NAV - Sticky Top 0 */
+        /* NAV */
         nav {
             background-color: #003366;
             text-align: center;
@@ -98,7 +96,7 @@
             margin-top: 0;
         }
 
-        /* Welcome Text Style */
+        /* Text Styles */
         .welcome-text {
             font-size: 1.1rem;
             color: #555;
@@ -108,24 +106,9 @@
         }
         .highlight { color: var(--primary-color); font-weight: bold; }
 
-        /* ULISTE ZEITPLAN */
-        ul.timeline-list {
-            list-style: none;
-            padding: 0;
-        }
-        ul.timeline-list li {
-            margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 4px solid #ddd;
-        }
+        ul.timeline-list { list-style: none; padding: 0; }
+        ul.timeline-list li { margin-bottom: 1.5rem; padding-left: 1rem; border-left: 4px solid #ddd; }
         
-        li.triathlon-highlight {
-            border-left: 4px solid var(--triathlon-border);
-            background-color: var(--triathlon-bg);
-            padding: 1rem;
-            border-radius: 0 8px 8px 0;
-        }
-
         .parallel-note {
             display: inline-block;
             background-color: #eee;
@@ -137,7 +120,6 @@
             margin: 0 5px;
         }
         
-        /* Location Badge als Link */
         .location-badge {
             font-size: 0.9rem;
             color: #d63384; 
@@ -148,31 +130,13 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-        .location-badge:hover {
-            background-color: #fce4ec;
-            color: #ad1457;
-        }
-        
-        /* Shared Location Style */
-        .shared-location {
-            display: block; 
-            margin-top: 5px;
-            margin-left: 0; 
-        }
+        .location-badge:hover { background-color: #fce4ec; color: #ad1457; }
+        .shared-location { display: block; margin-top: 5px; margin-left: 0; }
 
-        /* Yoga Kontakt Style */
-        .yoga-contact {
-            font-size: 0.9rem;
-            color: #666;
-            margin-left: 5px;
-        }
+        .yoga-contact { font-size: 0.9rem; color: #666; margin-left: 5px; }
         .yoga-contact a { color: var(--primary-color); text-decoration: none; }
-        .yoga-contact a:hover { text-decoration: underline; }
 
-        /* ORT & KARTE */
-        .location-info { margin-bottom: 2rem; }
-        
-        /* Map Gallery Grid */
+        /* Map Gallery */
         .map-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -186,45 +150,22 @@
             overflow: hidden;
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer; /* Zeigt an, dass man klicken kann */
+            cursor: pointer;
         }
-        .map-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        /* Highlight-Klasse für JS-Effekt */
+        .map-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .map-highlight {
             border: 3px solid #d63384 !important;
             box-shadow: 0 0 15px rgba(214, 51, 132, 0.5);
             animation: pulse 1s ease-in-out 3;
         }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
-        .map-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-            display: block;
-        }
-        .map-caption {
-            padding: 10px;
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 0.95rem;
-        }
-        
+        .map-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #eee; display: block; }
+        .map-caption { padding: 10px; font-weight: bold; color: var(--primary-color); font-size: 0.95rem; }
         .map-link { text-decoration: none; display: block; color: inherit; }
 
-        /* INFO BOXEN */
-        .info-box {
-            background-color: var(--info-box-bg);
-            border: 1px solid #c8e6c9;
+        /* Info Boxen */
+        .info-box, .warning-box {
             padding: 1rem;
             border-radius: 8px;
             margin-top: 1rem;
@@ -232,17 +173,8 @@
             align-items: flex-start;
             gap: 1rem;
         }
-        .warning-box {
-            background-color: var(--warning-box-bg);
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
+        .info-box { background-color: var(--info-box-bg); border: 1px solid #c8e6c9; }
+        .warning-box { background-color: var(--warning-box-bg); border: 1px solid #ffeeba; color: #856404; }
         .notice-box {
             background-color: var(--notice-bg);
             border-left: 5px solid var(--primary-color);
@@ -252,63 +184,44 @@
             font-size: 0.95rem;
         }
         .box-icon { font-size: 1.8rem; line-height: 1; }
-        
-        /* Flexbox hint for single days */
-        .flex-hint {
-            background-color: #e3f2fd;
-            color: #0d47a1;
-            padding: 10px;
-            text-align: center;
-            border-radius: 4px;
-            margin-bottom: 1.5rem;
-            font-weight: bold;
-        }
+        .flex-hint { background-color: #e3f2fd; color: #0d47a1; padding: 10px; text-align: center; border-radius: 4px; margin-bottom: 1.5rem; font-weight: bold; }
 
-        /* FORMULAR & TABELLE */
+        /* Formular */
         form { max-width: 100%; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
         .form-group label { font-weight: bold; display: block; margin-bottom: 0.5rem; }
         input[type="text"], input[type="email"], input[type="number"] { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        input[disabled] { background-color: #e9ecef; color: #6c757d; cursor: not-allowed; }
 
         .radio-box { background: var(--light-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid #dee2e6; }
         .radio-option { display: block; margin-bottom: 0.8rem; cursor: pointer; }
         .radio-option input { margin-right: 10px; transform: scale(1.2); }
 
         .table-wrapper { overflow-x: auto; margin-top: 1rem; }
-        
-        table.event-table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 500px;
-        }
-        
-        /* STICKY HEADER IMPLEMENTATION */
+        table.event-table { width: 100%; border-collapse: collapse; min-width: 500px; }
         table.event-table th { 
             background-color: #003366; 
             color: white; 
             padding: 12px; 
             text-align: center; 
             font-size: 0.9rem;
-            /* Fixiert den Header */
             position: sticky;
-            top: 55px; /* Abstand, damit es unter der Navigationsleiste klebt */
+            top: 55px; 
             z-index: 100;
             box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2); 
         }
-
-        table.event-table th:first-child, table.event-table td:first-child { text-align: left; width: 45%; }
+        table.event-table th:first-child, table.event-table td:first-child { text-align: left; width: 50%; } /* Breitere Spalte für Text */
         table.event-table td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
         table.event-table tr:nth-child(even) { background-color: #f9f9f9; }
         
         tr.tri-row { background-color: var(--triathlon-bg) !important; border-bottom: 1px solid white; }
         tr.tri-row td:first-child { border-left: 4px solid var(--triathlon-border); }
-        
         tr.food-row { background-color: var(--food-bg) !important; font-weight: bold; }
 
         .table-input { width: 60px !important; text-align: center; padding: 5px !important; }
         .table-section-header { background-color: var(--accent-color); color: var(--primary-color); font-weight: bold; padding: 10px; text-align: left; }
 
-        /* TOTAL COST BOX */
         .total-cost-wrapper {
             background-color: var(--total-box-bg);
             color: var(--total-text-color);
@@ -316,35 +229,83 @@
             border-radius: 8px;
             margin-top: 2rem;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        .total-cost-wrapper label { font-size: 1.1rem; display: block; margin-bottom: 0.5rem; }
         .total-cost-input {
-            background: transparent;
-            border: none;
-            color: var(--accent-color);
-            font-size: 2rem;
-            font-weight: bold;
-            text-align: center;
-            width: 100%;
+            background: transparent; border: none; color: var(--accent-color); font-size: 2rem; font-weight: bold; text-align: center; width: 100%;
         }
-        .payment-instruction {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #555;
-            font-size: 1rem;
-            color: #ddd;
-            line-height: 1.5;
-        }
+        .payment-instruction { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #555; font-size: 1rem; color: #ddd; line-height: 1.5; }
         .payment-instruction strong { color: var(--white); }
 
-        /* DISCLAIMER */
         .disclaimer-box { background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 1rem; margin-top: 2rem; border-radius: 4px; }
         .disclaimer-label { display: flex; gap: 10px; cursor: pointer; align-items: flex-start; margin-bottom: 0.8rem; }
         .disclaimer-label input { margin-top: 5px; flex-shrink: 0; }
 
         .btn-submit { background-color: var(--primary-color); color: white; padding: 1.2rem; font-size: 1.2rem; border: none; cursor: pointer; width: 100%; border-radius: 4px; font-weight: bold; margin-top: 1rem; }
         .btn-submit:hover { background-color: #003366; }
+
+        /* ACTION STYLES */
+        #email-fallback {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #e8f0fe;
+            border: 2px dashed #004b8d;
+            border-radius: 8px;
+        }
+        #email-fallback h3 { margin-top: 0; color: #004b8d; }
+        #email-body-text { width: 100%; height: 350px; font-family: monospace; padding: 10px; border: 1px solid #ccc; margin-bottom: 10px; white-space: pre; overflow-x: auto; }
+        
+        .action-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+            align-items: center;
+        }
+
+        .copy-btn { 
+            width: 100%;
+            background-color: #28a745; 
+            color: white; 
+            padding: 15px 20px; 
+            border: none; 
+            cursor: pointer; 
+            font-weight: bold; 
+            border-radius: 6px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .copy-btn:hover { background-color: #218838; transform: translateY(-1px); }
+
+        .or-divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #666;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .or-divider::before, .or-divider::after { content: ''; flex: 1; border-bottom: 1px solid #ccc; }
+        .or-divider::before { margin-right: 15px; }
+        .or-divider::after { margin-left: 15px; }
+
+        .mail-btn { 
+            width: 100%;
+            background-color: #fff;
+            color: #004b8d; 
+            border: 2px solid #004b8d; 
+            padding: 12px 20px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .mail-btn:hover { background-color: #e3f2fd; }
 
         @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
     </style>
@@ -375,17 +336,19 @@
                 Liebe BSG Gauselmann Sportler,<br><br>
                 wir laden euch ein zu einem Wochenende voller Bewegung, frischer Luft und guter Laune am Dümmer See! 
                 Unser Motto lautet: <span class="highlight">"Alles kann, nichts muss."</span><br>
-                Egal ob ihr euch beim Triathlon auspowern, beim Yoga entspannen oder einfach den Abend beim gemeinsamen Teambuilding ausklingen lassen wollt – 
+                Egal ob ihr euch beim Triathlon auspowern, 
+                <span style="font-weight:bold; color:#004b8d;">beim Bogenschießen und Kanufahren aktiv werden</span>, 
+                beim Yoga entspannen oder einfach den Abend beim gemeinsamen Teambuilding ausklingen lassen wollt – 
                 stellt euch euer Programm so zusammen, wie es euch gefällt. Wir freuen uns auf eine tolle Zeit mit euch!
             </p>
             <hr style="border:0; border-top:1px solid #ddd; margin: 2rem 0;">
             <div style="background-color: #f8f9fa; border-left: 5px solid #004b8d; padding: 15px; border-radius: 4px;">
                 <h3 style="margin-top:0; color:#004b8d;">Infos kurz & knapp:</h3>
                 <ul style="margin:0; padding-left: 20px;">
-                    <li>Das gesamte Sportprogramm (Kanu, Bogenschießen, Yoga etc.) ist kostenlos.</li>
-                    <li>Übernachtung 5€ Schutzgebühr.</li>
-                    <li>Essen pro Event 3€.</li>
-                    <li>Teilnahme auch nur an einzelnen Tagen oder Veranstaltungen möglich.</li>
+                    <li>Sportprogramm (Kanu, Bogenschießen, Yoga etc.): kostenlos.</li>
+                    <li><strong>Übernachtung (Wochenend-Pauschale):</strong> 10€ (Erw.) / 5€ (Kinder/Jgd. bis 16 J.).</li>
+                    <li><strong>Essen:</strong> 5€ (Erw.) / 3€ (Kind) pro Mahlzeit.</li>
+                    <li>Teilnahme auch nur an einzelnen Tagen möglich.</li>
                     <li style="font-weight:bold; color:#d9534f;">Eine Anmeldung ist für ALLE Teilnehmer zwingend erforderlich!</li>
                 </ul>
             </div>
@@ -436,11 +399,14 @@
                     <em>(Parallel – bitte entscheiden)</em>
                     <a href="#card-camping" class="location-badge shared-location" onclick="highlightCard('card-camping')">📍 Gemeinsamer Treffpunkt: Zeltplatz</a>
                     <br>
-                    19:00 Uhr: <strong>Fischbrötchen-Essen (3€)</strong>
+                    17:00 Uhr: Bogenschießen <a href="#card-camping" class="location-badge" onclick="highlightCard('card-camping')">📍 Ort: Zeltplatz</a><br>
+                    19:00 Uhr: <strong>Fischbrötchen-Essen (5€ / 3€)</strong>
                 </li>
 
                 <li>
                     <strong>Samstag:</strong><br>
+                    08:30 Uhr: Gemeinsames Frühstück<br>
+                    <br>
                     10:00 Uhr: Morning Yoga <a href="#card-camping" class="location-badge" onclick="highlightCard('card-camping')">📍 Ort: Zeltplatz</a><br>
                     <small><em>(Bitte Isomatte oder Yogamatte mitbringen!)</em></small><br>
                     <span class="yoga-contact">👉 Infos: <a href="https://www.kristingallert.de/yoga/" target="_blank">www.kristingallert.de/yoga/</a></span><br>
@@ -454,16 +420,18 @@
                     <br>
                     Nachmittags: Offenes Programm (Spiele, Volleyball)<br>
                     17:00 Uhr: <strong>Bogenschießen</strong> <a href="#card-camping" class="location-badge" onclick="highlightCard('card-camping')">📍 Ort: Zeltplatz</a><br>
-                    19:00 Uhr: <strong>Pizzabuffet (3€)</strong>
+                    19:00 Uhr: <strong>Pizzabuffet (5€ / 3€)</strong>
                 </li>
 
                 <li>
                     <strong>Sonntag:</strong><br>
+                    08:30 Uhr: Gemeinsames Frühstück<br>
+                    <br>
                     10:00 Uhr: Morning Yoga <a href="#card-camping" class="location-badge" onclick="highlightCard('card-camping')">📍 Ort: Zeltplatz</a><br>
                     <small><em>(Bitte Isomatte oder Yogamatte mitbringen!)</em></small><br>
                     <span class="yoga-contact">👉 Infos: <a href="https://www.kristingallert.de/yoga/" target="_blank">www.kristingallert.de/yoga/</a></span><br>
                     <br>
-                    Anschließend: Gemeinsames Frühstück, Abbau & Abreise.
+                    Anschließend: Abbau & Abreise.
                 </li>
             </ul>
         </section>
@@ -475,9 +443,8 @@
             <div class="location-info">
                 <h3>Campingplatz Hüde</h3>
                 <p>Kiebitzweg (Platz C12), 49448 Hüde</p>
-                <p><strong>Regeln:</strong> Nur für BSG-Mitglieder. 5€ Gebühr.</p>
+                <p><strong>Kosten:</strong> 10€ (Erw.) / 5€ (Kinder/Jgd. bis 16) für das Wochenende.</p>
                 
-                <!-- Boxen für Inklusiv/Exklusiv -->
                 <div class="info-box">
                     <span class="box-icon">☕</span>
                     <div>
@@ -491,40 +458,33 @@
                     <div>
                         <strong>Bitte selbst mitbringen:</strong><br>
                         1. Eigenes Campingmaterial (Zelt, Schlafsack, etc.)<br>
-                        2. <strong>Aufschnitt & Belag</strong> für die Brötchen (Marmelade, Käse, Wurst etc.)
+                        2. <strong>Geschirr & Besteck</strong> (für alle Mahlzeiten)<br>
+                        3. <strong>Aufschnitt & Belag</strong> für die Brötchen (Marmelade, Käse, Wurst etc.)
                     </div>
                 </div>
             </div>
 
             <!-- KARTEN GALERIE -->
             <h3>Lagepläne & Treffpunkte</h3>
-            <p style="font-size:0.9rem; color:#666;">(Klicke auf eine Karte, um Google Maps zu öffnen)</p>
             <div class="map-gallery">
-                
-                <!-- Karte 1: Camping (Koordinaten-Link) -->
                 <a href="https://www.google.com/maps/search/?api=1&query=52.49685,8.363849" target="_blank" class="map-link">
                     <div id="card-camping" class="map-card">
                         <img src="Zeltplatz.jpg" alt="Karte Zeltplatz">
                         <div class="map-caption">Camping & Treffpunkt</div>
                     </div>
                 </a>
-
-                <!-- Karte 2: Schwimmen -->
                 <a href="https://www.google.com/maps/search/?api=1&query=Freizeitbad+Dümmer" target="_blank" class="map-link">
                     <div id="card-schwimmen" class="map-card">
                         <img src="Freizeitbad.jpg" alt="Karte Schwimmbad">
                         <div class="map-caption">Treffpunkt Schwimmen</div>
                     </div>
                 </a>
-
-                <!-- Karte 3: Segeln -->
                 <a href="https://www.google.com/maps/search/?api=1&query=Birkenallee+56,+49459+Lembruch" target="_blank" class="map-link">
                     <div id="card-segeln" class="map-card">
                         <img src="Schlick.jpg" alt="Karte Bootsverleih Schlick">
                         <div class="map-caption">Segeln (Bootsverleih Schlick)</div>
                     </div>
                 </a>
-
             </div>
         </section>
 
@@ -532,20 +492,18 @@
         <section id="anmeldung">
             <h2>Anmeldung</h2>
 
-            <!-- HINWEIS BOX WINDHUNDPRINZIP + DEADLINE -->
             <div class="notice-box">
                 <strong>ℹ️ Wichtiger Hinweis zur Platzvergabe:</strong><br>
                 Die Plätze sind limitiert. Die Anmeldung erfolgt vorbehaltlich verfügbarer Kapazitäten nach dem <strong>Windhundprinzip</strong>.<br>
                 <span style="color:#d9534f; font-weight:bold;">Anmeldeschluss ist der 01.05.2026.</span>
             </div>
 
-            <!-- HINWEIS EINZELNE TAGE -->
             <div class="flex-hint">
                 Du kannst dich für das ganze Wochenende anmelden oder uns auch nur an einzelnen Tagen besuchen!
             </div>
 
-            <!-- WICHTIG: Das Formular hat jetzt kein Action-Ziel mehr, sondern wird von JS gesteuert -->
-            <form id="eventForm" onsubmit="event.preventDefault(); sendMail();">
+            <!-- Javascript gesteuertes Formular -->
+            <form id="eventForm" onsubmit="event.preventDefault(); prepareData();">
                 
                 <div class="form-row">
                     <div class="form-group">
@@ -558,7 +516,6 @@
                     </div>
                 </div>
 
-                <!-- 1. ÜBERNACHTUNG -->
                 <h3>1. Anreise & Schlafen</h3>
                 <div class="radio-box">
                     <label class="radio-option">
@@ -571,20 +528,28 @@
                     </label>
                     <label class="radio-option">
                         <input type="radio" name="Anreise" value="Tagesgast" class="camping-radio">
-                        Nur Tagesgast (Keine Übernachtung, 0€ Camping-Gebühr)
+                        Nur Tagesgast (Keine Übernachtung)
                     </label>
 
                     <div style="margin-top: 1rem; border-top: 1px solid #ddd; padding-top:1rem;">
-                        <label style="font-weight:bold; display:block; margin-bottom:5px; color:#d9534f;">WICHTIG für Berechnung:</label>
-                        <label style="display:block; margin-bottom:5px;">Anzahl Personen für Übernachtung (5€ p.P.):</label>
-                        <input type="number" id="camping_anzahl" min="0" value="0" placeholder="0">
+                        <label style="font-weight:bold; display:block; margin-bottom:10px; color:#d9534f;">Anzahl Camper (Wochenend-Pauschale):</label>
+                        
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-bottom:15px;">
+                            <div>
+                                <label style="font-size:0.9rem;">Erwachsene (10€):</label>
+                                <input type="number" id="camping_erw" min="0" value="0" placeholder="0">
+                            </div>
+                            <div>
+                                <label style="font-size:0.9rem;">Kinder/Jgd. bis 16 (5€):</label>
+                                <input type="number" id="camping_kind" min="0" value="0" placeholder="0">
+                            </div>
+                        </div>
                         
                         <label style="display:block; margin-top:10px; margin-bottom:5px;">Details (Zelt/Wohnwagen etc):</label>
                         <input type="text" id="unterkunft_details" placeholder="z.B. 'Wohnwagen'">
                     </div>
                 </div>
 
-                <!-- 2. SPORT & ESSEN (TABELLE) -->
                 <h3 style="margin-top: 2rem;">2. Programm & Verpflegung</h3>
                 <p>Bitte Anzahl der Personen eintragen (0 = keine Teilnahme).</p>
                 
@@ -594,169 +559,47 @@
                             <tr>
                                 <th>Veranstaltung</th>
                                 <th>Erw.</th>
-                                <th>Jgd.</th>
-                                <th>Kind<br><small>(bis 13)</small></th>
+                                <th>Kind/Jgd.<br><small>(bis 16)</small></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Mittwoch -->
-                            <tr>
-                                <td colspan="4" class="table-section-header">Mittwoch (13.05.)</td>
-                            </tr>
-                            <tr class="tri-row">
-                                <td data-label="Mi Triathlon Schwimmen"><strong>17:00 Triathlon: Schwimmen</strong></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
+                            <tr><td colspan="3" class="table-section-header">Mittwoch (13.05.)</td></tr>
+                            <tr class="tri-row"><td data-label="Mi Triathlon Schwimmen"><strong>17:00 Triathlon: Schwimmen</strong></td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
 
-                            <!-- Donnerstag -->
-                            <tr>
-                                <td colspan="4" class="table-section-header">Donnerstag (14.05.)</td>
-                            </tr>
-                            <tr class="tri-row">
-                                <td data-label="Do Triathlon Laufen">
-                                    <strong>07:30 Triathlon: Laufen</strong><br>
-                                    <small style="color:#666;">(Anmeldung nicht erforderlich)</small>
-                                </td>
-                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Do Morning Yoga">10:00 Morning Yoga</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Do Kanutour Lohne">11:00 Kanutour (Lohne)</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Do 3D Bogenparcours Venne">11:00 3D Bogenparcours (Venne) <br><small>(Parallel zur Kanutour)</small></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Do Bogenschießen Platz">17:00 Bogenschießen (Platz)</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr class="food-row">
-                                <td data-label="Do Essen mit Dani">🍽️ Kochen & Essen mit Dani (3€)</td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                            </tr>
+                            <tr><td colspan="3" class="table-section-header">Donnerstag (14.05.)</td></tr>
+                            <tr class="tri-row"><td data-label="Do Triathlon Laufen"><strong>07:30 Triathlon: Laufen</strong><br><small style="color:#666; font-weight:normal;">(Keine Anmeldung nötig)</small></td><td><input type="number" class="table-input" disabled placeholder="-"></td><td><input type="number" class="table-input" disabled placeholder="-"></td></tr>
+                            <tr><td data-label="Do Morning Yoga">10:00 Morning Yoga</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Do Kanutour Lohne">11:00 Kanutour (Lohne)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Do 3D Bogen Venne">11:00 3D Bogenparcours (Venne)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Do Bogenschießen Platz">17:00 Bogenschießen (Platz)<br><small style="color:#666;">(Keine Anmeldung nötig)</small></td><td><input type="number" class="table-input" disabled placeholder="-"></td><td><input type="number" class="table-input" disabled placeholder="-"></td></tr>
+                            <tr class="food-row"><td data-label="Do Essen mit Dani">🍽️ Kochen & Essen (5€ / 3€)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
 
-                            <!-- Freitag -->
-                            <tr>
-                                <td colspan="4" class="table-section-header">Freitag (15.05.)</td>
-                            </tr>
-                            <tr class="tri-row">
-                                <td data-label="Fr Triathlon Laufen">
-                                    <strong>07:30 Triathlon: Laufen (Option 2)</strong><br>
-                                    <small style="color:#666;">(Anmeldung nicht erforderlich)</small>
-                                </td>
-                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Fr Morning Yoga">10:00 Morning Yoga</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Fr 3D Bogenparcours Venne">11:00 3D Bogenparcours (Venne)</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Fr Kanutour Hase">11:00 Kanutour (Hase) <br><small>(Parallel zu 3D)</small></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr class="food-row">
-                                <td data-label="Fr Fischbrötchen">🐟 19:00 Uhr Fischbrötchen (3€)</td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                            </tr>
+                            <tr><td colspan="3" class="table-section-header">Freitag (15.05.)</td></tr>
+                            <tr class="tri-row"><td data-label="Fr Triathlon Laufen"><strong>07:30 Triathlon: Laufen (Opt 2)</strong><br><small style="color:#666; font-weight:normal;">(Keine Anmeldung nötig)</small></td><td><input type="number" class="table-input" disabled placeholder="-"></td><td><input type="number" class="table-input" disabled placeholder="-"></td></tr>
+                            <tr><td data-label="Fr Morning Yoga">10:00 Morning Yoga</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Fr 3D Bogen Venne">11:00 3D Bogenparcours (Venne)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Fr Kanutour Hase">11:00 Kanutour (Hase)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Fr Bogenschießen Platz">17:00 Bogenschießen (Platz)<br><small style="color:#666;">(Keine Anmeldung nötig)</small></td><td><input type="number" class="table-input" disabled placeholder="-"></td><td><input type="number" class="table-input" disabled placeholder="-"></td></tr>
+                            <tr class="food-row"><td data-label="Fr Fischbrötchen">🐟 Fischbrötchen (5€ / 3€)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
 
-                            <!-- Samstag -->
-                            <tr>
-                                <td colspan="4" class="table-section-header">Samstag (16.05.)</td>
-                            </tr>
-                            <tr>
-                                <td data-label="Sa Morning Yoga">10:00 Morning Yoga</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Sa Minigolf">11:00 Minigolf</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            
-                            <!-- Triathlon Rad / Parallel -->
-                            <tr class="tri-row">
-                                <td data-label="Sa Triathlon Rad"><strong>14:00 Triathlon: Radfahren</strong><br><small>(Parallel zu Segeln)</small></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            
-                            <tr>
-                                <td data-label="Sa Segeln"><strong>14:00 Segeln (Lehmbruch)</strong><br><small>(Parallel zu Radfahren)</small></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            <tr>
-                                <td data-label="Sa Bogenschießen Platz">17:00 Bogenschießen (Platz)</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            
-                            <!-- Essen am Ende -->
-                            <tr class="food-row">
-                                <td data-label="Sa Pizzabuffet">🍕 19:00 Uhr Pizzabuffet (3€)</td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
-                            </tr>
-                            
-                            <!-- Sonntag -->
-                            <tr>
-                                <td colspan="4" class="table-section-header">Sonntag (17.05.)</td>
-                            </tr>
-                            <tr>
-                                <td data-label="So Morning Yoga">10:00 Morning Yoga</td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
-                            </tr>
+                            <tr><td colspan="3" class="table-section-header">Samstag (16.05.)</td></tr>
+                            <tr><td data-label="Sa Morning Yoga">10:00 Morning Yoga</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Sa Minigolf">11:00 Minigolf</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr class="tri-row"><td data-label="Sa Triathlon Rad"><strong>14:00 Triathlon: Radfahren</strong></td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Sa Segeln"><strong>14:00 Segeln (Lehmbruch)</strong></td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+                            <tr><td data-label="Sa Bogenschießen Platz">17:00 Bogenschießen (Platz)<br><small style="color:#666;">(Keine Anmeldung nötig)</small></td><td><input type="number" class="table-input" disabled placeholder="-"></td><td><input type="number" class="table-input" disabled placeholder="-"></td></tr>
+                            <tr class="food-row"><td data-label="Sa Pizzabuffet">🍕 Pizzabuffet (5€ / 3€)</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
+
+                            <tr><td colspan="3" class="table-section-header">Sonntag (17.05.)</td></tr>
+                            <tr><td data-label="So Morning Yoga">10:00 Morning Yoga</td><td><input type="number" class="table-input" min="0"></td><td><input type="number" class="table-input" min="0"></td></tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- TOTAL COSTS CALCULATION DISPLAY -->
                 <div class="total-cost-wrapper">
                     <label>Gesamtkosten:</label>
                     <input type="text" id="total_cost_display" class="total-cost-input" value="0 €" readonly>
-                    <small style="color:#aaa;">(Camping: 5€ p.P. | Essen: 3€ p.P./Event)</small>
+                    <small style="color:#aaa;">(Camping: 10€/5€ | Essen: 5€/3€)</small>
                     
                     <div class="payment-instruction">
                         Bitte den Betrag auf das Konto <strong>BSG Gauselmann</strong> überweisen.<br>
@@ -764,7 +607,6 @@
                     </div>
                 </div>
 
-                <!-- DISCLAIMER / HAFTUNG / DATENSCHUTZ -->
                 <div class="disclaimer-box">
                     <label class="disclaimer-label">
                         <input type="checkbox" required>
@@ -781,8 +623,34 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit">Verbindlich Anmelden (Email öffnen)</button>
+                <button type="submit" class="btn-submit">Anmelde-Text erstellen (nächster Schritt)</button>
             </form>
+
+            <!-- FALLBACK BOX -->
+            <div id="email-fallback">
+                <h3>👇 Dein Anmelde-Text ist fertig!</h3>
+                <p>Bitte wähle eine Option zum Versenden:</p>
+                
+                <textarea id="email-body-text" readonly></textarea>
+                
+                <div class="action-stack">
+                    <button class="copy-btn" onclick="copyToClipboard()">
+                        ✅ Text kopieren<br>
+                        <small style="font-weight:normal;">(Dann manuell in E-Mail einfügen)</small>
+                    </button>
+
+                    <div class="or-divider">ODER</div>
+
+                    <button class="mail-btn" onclick="forceMailOpen()">
+                        📧 Mail-Programm direkt öffnen
+                    </button>
+                </div>
+                
+                <div style="margin-top:15px; font-size:0.9rem; color:#666; text-align:center;">
+                    Empfänger-Adresse: <strong>xxx@bsg-gauselmann.de</strong>
+                </div>
+            </div>
+
         </section>
     </div>
 
@@ -790,121 +658,128 @@
         <p>&copy; 2026 BSG Gauselmann e.V.</p>
     </footer>
 
-    <!-- Script für Kostenberechnung & Highlighting & MAIL LOGIK -->
+    <!-- LOGIK -->
     <script>
-        // Highlighting Funktion für Karten
         function highlightCard(cardId) {
             document.querySelectorAll('.map-card').forEach(el => el.classList.remove('map-highlight'));
             const card = document.getElementById(cardId);
-            if (card) {
-                setTimeout(() => {
-                    card.classList.add('map-highlight');
-                }, 100);
-            }
+            if (card) { setTimeout(() => { card.classList.add('map-highlight'); }, 100); }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('eventForm');
             const totalDisplay = document.getElementById('total_cost_display');
-            const campingInput = document.getElementById('camping_anzahl');
+            
+            // NEUE EINGABEFELDER
+            const campErwInput = document.getElementById('camping_erw');
+            const campKindInput = document.getElementById('camping_kind');
+            
             const campingRadios = document.querySelectorAll('.camping-radio');
-            const foodInputs = document.querySelectorAll('.food-calc');
 
             function calculateTotal() {
                 let total = 0;
                 let isDayGuest = false;
-                campingRadios.forEach(radio => {
-                    if (radio.checked && radio.value === 'Tagesgast') isDayGuest = true;
-                });
+                
+                campingRadios.forEach(radio => { if(radio.checked && radio.value === 'Tagesgast') isDayGuest = true; });
 
                 if (!isDayGuest) {
-                    const campingCount = parseInt(campingInput.value) || 0;
-                    total += campingCount * 5;
+                    const countErw = parseInt(campErwInput.value) || 0;
+                    const countKind = parseInt(campKindInput.value) || 0;
+                    total += (countErw * 10) + (countKind * 5); // 10€ Erw, 5€ Kind
                 }
 
-                foodInputs.forEach(input => {
-                    const count = parseInt(input.value) || 0;
-                    total += count * 3;
+                // SPEZIAL-LOGIK FÜR ESSEN (Erw=Spalte0=5€, Kind=Spalte1=3€)
+                const foodRows = document.querySelectorAll('tr.food-row');
+                foodRows.forEach(row => {
+                    const inputs = row.querySelectorAll('input[type="number"]');
+                    if(inputs.length === 2) {
+                        const countFoodErw = parseInt(inputs[0].value) || 0;
+                        const countFoodKind = parseInt(inputs[1].value) || 0;
+                        total += (countFoodErw * 5) + (countFoodKind * 3);
+                    }
                 });
 
                 totalDisplay.value = total + " €";
             }
-
             form.addEventListener('input', calculateTotal);
             calculateTotal();
         });
 
-        // E-MAIL SEND LOGIC
-        function sendMail() {
-            // Empfänger
-            const recipient = "bsg-segeln@gauselmann.de"; // HIER ANPASSEN FALLS NÖTIG
-            
-            // Formulardaten sammeln
+        const recipient = "xxx@bsg-gauselmann.de"; 
+        let finalMailBody = "";
+
+        function prepareData() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const campingAnzahl = document.getElementById('camping_anzahl').value;
+            
+            const countErw = document.getElementById('camping_erw').value;
+            const countKind = document.getElementById('camping_kind').value;
+            
             const details = document.getElementById('unterkunft_details').value;
             const totalCost = document.getElementById('total_cost_display').value;
 
-            // Anreise Radio
             let anreise = "";
-            document.querySelectorAll('.camping-radio').forEach(r => {
-                if(r.checked) anreise = r.parentElement.innerText.trim();
-            });
+            document.querySelectorAll('.camping-radio').forEach(r => { if(r.checked) anreise = r.parentElement.innerText.trim(); });
 
-            // Tabelle parsen
-            let eventsText = "";
-            const rows = document.querySelectorAll('#activityTable tbody tr');
+            let eventsTextFull = "";
             
+            // UPDATED LOOP FOR 2 COLUMNS
+            const rows = document.querySelectorAll('#activityTable tbody tr');
             rows.forEach(row => {
                 const labelCell = row.querySelector('td[data-label]');
                 const inputs = row.querySelectorAll('input[type="number"]');
                 
-                if (labelCell && inputs.length === 3) {
+                if (labelCell && inputs.length === 2) {
                     const erw = inputs[0].value;
-                    const jgd = inputs[1].value;
-                    const kind = inputs[2].value;
-
-                    // Nur wenn irgendwo was eingetragen ist
-                    if ((erw && erw > 0) || (jgd && jgd > 0) || (kind && kind > 0)) {
-                        let eventName = labelCell.getAttribute('data-label');
-                        // Bereinigen des Labels für bessere Lesbarkeit
-                        eventsText += `- ${eventName}: ${erw || 0} Erw, ${jgd || 0} Jgd, ${kind || 0} Ki\n`;
+                    const kind = inputs[1].value;
+                    
+                    if ((erw && erw > 0) || (kind && kind > 0)) {
+                        let eventLabel = labelCell.getAttribute('data-label');
+                        eventsTextFull += `- ${eventLabel}: ${erw||0} Erw / ${kind||0} K/J\n`;
                     }
                 }
             });
+            if (eventsTextFull === "") {
+                eventsTextFull = "(Keine Events ausgewählt)\n";
+            }
 
-            if (eventsText === "") eventsText = "(Keine spezifischen Events ausgewählt)\n";
+            finalMailBody = 
+`Anmeldung Sportwochenende 2026
 
-            // Email Body zusammenbauen
-            const subject = encodeURIComponent(`Anmeldung Sportwochenende 2026 - ${name}`);
-            const body = encodeURIComponent(
-`Hallo BSG-Team,
+NAME: ${name}
+EMAIL: ${email}
 
-hiermit melde ich mich verbindlich für das Sportwochenende 2026 an.
-
---- PERSÖNLICHE DATEN ---
-Name: ${name}
-E-Mail: ${email}
-
---- UNTERKUNFT ---
-Anreise/Status: ${anreise}
-Anzahl Camper: ${campingAnzahl}
+UNTERKUNFT:
+${anreise}
+Anzahl Camper: ${countErw} Erw. / ${countKind} Kinder/Jgd
 Details: ${details}
 
---- PROGRAMM & ESSEN ---
-${eventsText}
---- GESAMTKOSTEN ---
-Kalkuliert: ${totalCost}
+EVENTS & ESSEN:
+${eventsTextFull}
 
-(Die Haftungserklärung und Datenschutzbestimmungen wurden im Formular akzeptiert.)
+GESAMTKOSTEN: ${totalCost}
 
-Viele Grüße,
-${name}`
-            );
+(Haftung & Datenschutz akzeptiert)`;
 
-            // Mailto Link öffnen
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            document.getElementById('email-body-text').value = finalMailBody;
+            document.getElementById('email-fallback').style.display = 'block';
+            document.getElementById('email-fallback').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function forceMailOpen() {
+            const name = document.getElementById('name').value;
+            let bodyText = finalMailBody;
+            const subject = encodeURIComponent(`Anmeldung SportWE - ${name}`);
+            let bodyEncoded = encodeURIComponent(bodyText);
+            bodyEncoded = bodyEncoded.replace(/%0A/g, '%0D%0A');
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${bodyEncoded}`;
+        }
+
+        function copyToClipboard() {
+            const copyText = document.getElementById("email-body-text");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Text wurde kopiert!\n\nÖffne jetzt bitte dein E-Mail-Programm und füge den Text ein.");
         }
     </script>
 
