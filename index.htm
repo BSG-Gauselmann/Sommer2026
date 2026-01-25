@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSG Gauselmann - Sportwochenende Himmelfahrt 2026</title>
+    <meta name="description" content="Anmeldung zum BSG Gauselmann Sportwochenende Himmelfahrt 2026">
+    <!-- Favicon (Kleines Zelt-Icon im Browser-Tab) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛺</text></svg>">
+    
+    <title>BSG Gauselmann - Sportwochenende 2026</title>
     <style>
         :root {
             --primary-color: #004b8d;
@@ -40,15 +44,28 @@
             text-align: center;
         }
         header h1 { margin: 0; font-size: 2.2rem; }
-        header p { font-size: 1.1rem; margin-top: 0.5rem; color: var(--accent-color); font-weight: bold; }
+        
+        /* Veranstaltungssubline */
+        .organizer-line {
+            font-size: 0.95rem;
+            margin-top: 0.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            opacity: 0.9;
+            font-weight: normal;
+        }
 
-        /* NAV */
+        header p { font-size: 1.2rem; margin-top: 0.5rem; color: var(--accent-color); font-weight: bold; margin-bottom: 0; }
+        header span { display: block; margin-top: 5px; font-size: 0.95rem; opacity: 0.9; }
+
+        /* NAV - Sticky Top 0 */
         nav {
             background-color: #003366;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav a {
             color: var(--white);
@@ -136,11 +153,11 @@
             color: #ad1457;
         }
         
-        /* Shared Location Style (für den "Gemeinsamer Treffpunkt") */
+        /* Shared Location Style */
         .shared-location {
             display: block; 
             margin-top: 5px;
-            margin-left: 0; /* Reset margin since it's a new line */
+            margin-left: 0; 
         }
 
         /* Yoga Kontakt Style */
@@ -264,7 +281,21 @@
             border-collapse: collapse;
             min-width: 500px;
         }
-        table.event-table th { background-color: #003366; color: white; padding: 12px; text-align: center; font-size: 0.9rem; }
+        
+        /* STICKY HEADER IMPLEMENTATION */
+        table.event-table th { 
+            background-color: #003366; 
+            color: white; 
+            padding: 12px; 
+            text-align: center; 
+            font-size: 0.9rem;
+            /* Fixiert den Header */
+            position: sticky;
+            top: 55px; /* Abstand, damit es unter der Navigationsleiste klebt */
+            z-index: 100;
+            box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2); 
+        }
+
         table.event-table th:first-child, table.event-table td:first-child { text-align: left; width: 45%; }
         table.event-table td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
         table.event-table tr:nth-child(even) { background-color: #f9f9f9; }
@@ -309,8 +340,8 @@
 
         /* DISCLAIMER */
         .disclaimer-box { background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 1rem; margin-top: 2rem; border-radius: 4px; }
-        .disclaimer-label { display: flex; gap: 10px; cursor: pointer; }
-        .disclaimer-label input { margin-top: 5px; }
+        .disclaimer-label { display: flex; gap: 10px; cursor: pointer; align-items: flex-start; margin-bottom: 0.8rem; }
+        .disclaimer-label input { margin-top: 5px; flex-shrink: 0; }
 
         .btn-submit { background-color: var(--primary-color); color: white; padding: 1.2rem; font-size: 1.2rem; border: none; cursor: pointer; width: 100%; border-radius: 4px; font-weight: bold; margin-top: 1rem; }
         .btn-submit:hover { background-color: #003366; }
@@ -322,6 +353,8 @@
 
     <header>
         <h1>BSG Gauselmann</h1>
+        <div class="organizer-line">– Eine Veranstaltung der BSG Gauselmann e.V. –</div>
+        
         <p>Sportwochenende Himmelfahrt 2026</p>
         <span>13. – 17. Mai 2026 | Hüde</span>
     </header>
@@ -349,11 +382,11 @@
             <div style="background-color: #f8f9fa; border-left: 5px solid #004b8d; padding: 15px; border-radius: 4px;">
                 <h3 style="margin-top:0; color:#004b8d;">Infos kurz & knapp:</h3>
                 <ul style="margin:0; padding-left: 20px;">
-                    <li>Sport ist kostenlos.</li>
+                    <li>Das gesamte Sportprogramm (Kanu, Bogenschießen, Yoga etc.) ist kostenlos.</li>
                     <li>Übernachtung 5€ Schutzgebühr.</li>
                     <li>Essen pro Event 3€.</li>
-                    <li style="font-weight:bold; color:#d9534f;">Eine Anmeldung ist für ALLE Teilnehmer (auch Tagesgäste!) zwingend erforderlich!</li>
                     <li>Teilnahme auch nur an einzelnen Tagen oder Veranstaltungen möglich.</li>
+                    <li style="font-weight:bold; color:#d9534f;">Eine Anmeldung ist für ALLE Teilnehmer zwingend erforderlich!</li>
                 </ul>
             </div>
         </section>
@@ -468,8 +501,8 @@
             <p style="font-size:0.9rem; color:#666;">(Klicke auf eine Karte, um Google Maps zu öffnen)</p>
             <div class="map-gallery">
                 
-                <!-- Karte 1: Camping -->
-                <a href="https://www.google.com/maps/search/?api=1&query=Campingplatz+Hüde" target="_blank" class="map-link">
+                <!-- Karte 1: Camping (Koordinaten-Link) -->
+                <a href="https://www.google.com/maps/search/?api=1&query=52.49685,8.363849" target="_blank" class="map-link">
                     <div id="card-camping" class="map-card">
                         <img src="Zeltplatz.jpg" alt="Karte Zeltplatz">
                         <div class="map-caption">Camping & Treffpunkt</div>
@@ -499,10 +532,11 @@
         <section id="anmeldung">
             <h2>Anmeldung</h2>
 
-            <!-- HINWEIS BOX WINDHUNDPRINZIP -->
+            <!-- HINWEIS BOX WINDHUNDPRINZIP + DEADLINE -->
             <div class="notice-box">
                 <strong>ℹ️ Wichtiger Hinweis zur Platzvergabe:</strong><br>
-                Die Plätze sind limitiert. Die Anmeldung erfolgt vorbehaltlich verfügbarer Kapazitäten nach dem <strong>Windhundprinzip</strong> (Reihenfolge des Eingangs der Anmeldung).
+                Die Plätze sind limitiert. Die Anmeldung erfolgt vorbehaltlich verfügbarer Kapazitäten nach dem <strong>Windhundprinzip</strong>.<br>
+                <span style="color:#d9534f; font-weight:bold;">Anmeldeschluss ist der 01.05.2026.</span>
             </div>
 
             <!-- HINWEIS EINZELNE TAGE -->
@@ -510,16 +544,17 @@
                 Du kannst dich für das ganze Wochenende anmelden oder uns auch nur an einzelnen Tagen besuchen!
             </div>
 
-            <form id="eventForm" action="https://formspree.io/f/xaqerneg" method="POST">
+            <!-- WICHTIG: Das Formular hat jetzt kein Action-Ziel mehr, sondern wird von JS gesteuert -->
+            <form id="eventForm" onsubmit="event.preventDefault(); sendMail();">
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" name="Name" required placeholder="Vor- und Nachname">
+                        <input type="text" id="name" required placeholder="Vor- und Nachname">
                     </div>
                     <div class="form-group">
                         <label>E-Mail</label>
-                        <input type="email" name="Email" required placeholder="E-Mail Adresse">
+                        <input type="email" id="email" required placeholder="E-Mail Adresse">
                     </div>
                 </div>
 
@@ -542,10 +577,10 @@
                     <div style="margin-top: 1rem; border-top: 1px solid #ddd; padding-top:1rem;">
                         <label style="font-weight:bold; display:block; margin-bottom:5px; color:#d9534f;">WICHTIG für Berechnung:</label>
                         <label style="display:block; margin-bottom:5px;">Anzahl Personen für Übernachtung (5€ p.P.):</label>
-                        <input type="number" id="camping_anzahl" name="Camping_Anzahl_Personen" min="0" value="0" placeholder="0">
+                        <input type="number" id="camping_anzahl" min="0" value="0" placeholder="0">
                         
                         <label style="display:block; margin-top:10px; margin-bottom:5px;">Details (Zelt/Wohnwagen etc):</label>
-                        <input type="text" name="Unterkunft_Details" placeholder="z.B. 'Wohnwagen'">
+                        <input type="text" id="unterkunft_details" placeholder="z.B. 'Wohnwagen'">
                     </div>
                 </div>
 
@@ -554,7 +589,7 @@
                 <p>Bitte Anzahl der Personen eintragen (0 = keine Teilnahme).</p>
                 
                 <div class="table-wrapper">
-                    <table class="event-table">
+                    <table class="event-table" id="activityTable">
                         <thead>
                             <tr>
                                 <th>Veranstaltung</th>
@@ -569,10 +604,10 @@
                                 <td colspan="4" class="table-section-header">Mittwoch (13.05.)</td>
                             </tr>
                             <tr class="tri-row">
-                                <td><strong>17:00 Triathlon: Schwimmen</strong></td>
-                                <td><input type="number" name="Mi_TriSwim_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Mi_TriSwim_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Mi_TriSwim_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Mi Triathlon Schwimmen"><strong>17:00 Triathlon: Schwimmen</strong></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
 
                             <!-- Donnerstag -->
@@ -580,43 +615,43 @@
                                 <td colspan="4" class="table-section-header">Donnerstag (14.05.)</td>
                             </tr>
                             <tr class="tri-row">
-                                <td>
+                                <td data-label="Do Triathlon Laufen">
                                     <strong>07:30 Triathlon: Laufen</strong><br>
                                     <small style="color:#666;">(Anmeldung nicht erforderlich)</small>
                                 </td>
-                                <td><input type="number" name="Do_TriLauf_Erw" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" name="Do_TriLauf_Jgd" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" name="Do_TriLauf_Kind" class="table-input" disabled placeholder="-"></td>
+                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
+                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
+                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>10:00 Morning Yoga</td>
-                                <td><input type="number" name="Do_Yoga_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Yoga_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Yoga_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Do Morning Yoga">10:00 Morning Yoga</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>11:00 Kanutour (Lohne)</td>
-                                <td><input type="number" name="Do_Kanu_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Kanu_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Kanu_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Do Kanutour Lohne">11:00 Kanutour (Lohne)</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>11:00 3D Bogenparcours (Venne) <br><small>(Parallel zur Kanutour)</small></td>
-                                <td><input type="number" name="Do_3D_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_3D_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_3D_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Do 3D Bogenparcours Venne">11:00 3D Bogenparcours (Venne) <br><small>(Parallel zur Kanutour)</small></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>17:00 Bogenschießen (Platz)</td>
-                                <td><input type="number" name="Do_Bogen_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Bogen_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Bogen_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Do Bogenschießen Platz">17:00 Bogenschießen (Platz)</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr class="food-row">
-                                <td>🍽️ Kochen & Essen mit Dani (3€)</td>
-                                <td><input type="number" name="Do_Essen_Erw" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Essen_Jgd" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Do_Essen_Kind" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td data-label="Do Essen mit Dani">🍽️ Kochen & Essen mit Dani (3€)</td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
                             </tr>
 
                             <!-- Freitag -->
@@ -624,37 +659,37 @@
                                 <td colspan="4" class="table-section-header">Freitag (15.05.)</td>
                             </tr>
                             <tr class="tri-row">
-                                <td>
+                                <td data-label="Fr Triathlon Laufen">
                                     <strong>07:30 Triathlon: Laufen (Option 2)</strong><br>
                                     <small style="color:#666;">(Anmeldung nicht erforderlich)</small>
                                 </td>
-                                <td><input type="number" name="Fr_TriLauf_Erw" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" name="Fr_TriLauf_Jgd" class="table-input" disabled placeholder="-"></td>
-                                <td><input type="number" name="Fr_TriLauf_Kind" class="table-input" disabled placeholder="-"></td>
+                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
+                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
+                                <td><input type="number" class="table-input" disabled placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>10:00 Morning Yoga</td>
-                                <td><input type="number" name="Fr_Yoga_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_Yoga_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_Yoga_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Fr Morning Yoga">10:00 Morning Yoga</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>11:00 3D Bogenparcours (Venne)</td>
-                                <td><input type="number" name="Fr_3D_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_3D_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_3D_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Fr 3D Bogenparcours Venne">11:00 3D Bogenparcours (Venne)</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>11:00 Kanutour (Hase) <br><small>(Parallel zu 3D)</small></td>
-                                <td><input type="number" name="Fr_KanuHase_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_KanuHase_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_KanuHase_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Fr Kanutour Hase">11:00 Kanutour (Hase) <br><small>(Parallel zu 3D)</small></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr class="food-row">
-                                <td>🐟 19:00 Uhr Fischbrötchen (3€)</td>
-                                <td><input type="number" name="Fr_Fisch_Erw" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_Fisch_Jgd" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Fr_Fisch_Kind" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td data-label="Fr Fischbrötchen">🐟 19:00 Uhr Fischbrötchen (3€)</td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
                             </tr>
 
                             <!-- Samstag -->
@@ -662,45 +697,45 @@
                                 <td colspan="4" class="table-section-header">Samstag (16.05.)</td>
                             </tr>
                             <tr>
-                                <td>10:00 Morning Yoga</td>
-                                <td><input type="number" name="Sa_Yoga_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Yoga_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Yoga_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Sa Morning Yoga">10:00 Morning Yoga</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>11:00 Minigolf</td>
-                                <td><input type="number" name="Sa_Minigolf_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Minigolf_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Minigolf_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Sa Minigolf">11:00 Minigolf</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             
                             <!-- Triathlon Rad / Parallel -->
                             <tr class="tri-row">
-                                <td><strong>14:00 Triathlon: Radfahren</strong><br><small>(Parallel zu Segeln)</small></td>
-                                <td><input type="number" name="Sa_TriBike_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_TriBike_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_TriBike_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Sa Triathlon Rad"><strong>14:00 Triathlon: Radfahren</strong><br><small>(Parallel zu Segeln)</small></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             
                             <tr>
-                                <td><strong>14:00 Segeln (Lehmbruch)</strong><br><small>(Parallel zu Radfahren)</small></td>
-                                <td><input type="number" name="Sa_Segeln_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Segeln_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Segeln_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Sa Segeln"><strong>14:00 Segeln (Lehmbruch)</strong><br><small>(Parallel zu Radfahren)</small></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             <tr>
-                                <td>17:00 Bogenschießen (Platz)</td>
-                                <td><input type="number" name="Sa_Bogen_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Bogen_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Bogen_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="Sa Bogenschießen Platz">17:00 Bogenschießen (Platz)</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                             
                             <!-- Essen am Ende -->
                             <tr class="food-row">
-                                <td>🍕 19:00 Uhr Pizzabuffet (3€)</td>
-                                <td><input type="number" name="Sa_Pizza_Erw" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Pizza_Jgd" class="food-calc table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="Sa_Pizza_Kind" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td data-label="Sa Pizzabuffet">🍕 19:00 Uhr Pizzabuffet (3€)</td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="food-calc table-input" min="0" placeholder="-"></td>
                             </tr>
                             
                             <!-- Sonntag -->
@@ -708,10 +743,10 @@
                                 <td colspan="4" class="table-section-header">Sonntag (17.05.)</td>
                             </tr>
                             <tr>
-                                <td>10:00 Morning Yoga</td>
-                                <td><input type="number" name="So_Yoga_Erw" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="So_Yoga_Jgd" class="table-input" min="0" placeholder="-"></td>
-                                <td><input type="number" name="So_Yoga_Kind" class="table-input" min="0" placeholder="-"></td>
+                                <td data-label="So Morning Yoga">10:00 Morning Yoga</td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
+                                <td><input type="number" class="table-input" min="0" placeholder="-"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -720,7 +755,7 @@
                 <!-- TOTAL COSTS CALCULATION DISPLAY -->
                 <div class="total-cost-wrapper">
                     <label>Gesamtkosten:</label>
-                    <input type="text" name="Gesamtkosten_Kalkuliert" id="total_cost_display" class="total-cost-input" value="0 €" readonly>
+                    <input type="text" id="total_cost_display" class="total-cost-input" value="0 €" readonly>
                     <small style="color:#aaa;">(Camping: 5€ p.P. | Essen: 3€ p.P./Event)</small>
                     
                     <div class="payment-instruction">
@@ -729,17 +764,24 @@
                     </div>
                 </div>
 
-                <!-- DISCLAIMER -->
+                <!-- DISCLAIMER / HAFTUNG / DATENSCHUTZ -->
                 <div class="disclaimer-box">
                     <label class="disclaimer-label">
-                        <input type="checkbox" name="Haftung_Akzeptiert" required>
+                        <input type="checkbox" required>
                         <span>
-                            <strong>Pflichtfeld:</strong> Ich habe zur Kenntnis genommen, dass bei der Übernachtung mit Minderjährigen (außerhalb der Sportangebote) die Eltern/Erziehungsberechtigten die volle Aufsichtspflicht tragen. <strong>Den Anweisungen der Übungsleiter ist während der Veranstaltungen zwingend Folge zu leisten.</strong>
+                            <strong>Pflichtfeld (Haftung):</strong> Ich habe zur Kenntnis genommen, dass bei der Übernachtung mit Minderjährigen (außerhalb der Sportangebote) die Eltern/Erziehungsberechtigten die volle Aufsichtspflicht tragen. Den Anweisungen der Übungsleiter ist Folge zu leisten.
+                        </span>
+                    </label>
+
+                    <label class="disclaimer-label">
+                        <input type="checkbox" required>
+                        <span>
+                            <strong>Pflichtfeld (Datenschutz):</strong> Ich stimme zu, dass meine Daten zur Organisation und Durchführung des Sportwochenendes elektronisch gespeichert und verarbeitet werden.
                         </span>
                     </label>
                 </div>
 
-                <button type="submit" class="btn-submit">Verbindlich Anmelden</button>
+                <button type="submit" class="btn-submit">Verbindlich Anmelden (Email öffnen)</button>
             </form>
         </section>
     </div>
@@ -748,16 +790,13 @@
         <p>&copy; 2026 BSG Gauselmann e.V.</p>
     </footer>
 
-    <!-- Script für Kostenberechnung & Highlighting -->
+    <!-- Script für Kostenberechnung & Highlighting & MAIL LOGIK -->
     <script>
         // Highlighting Funktion für Karten
         function highlightCard(cardId) {
-            // Alle Highlights entfernen
             document.querySelectorAll('.map-card').forEach(el => el.classList.remove('map-highlight'));
-            
             const card = document.getElementById(cardId);
             if (card) {
-                // Kurz warten bis Scroll fertig ist, dann highlighten
                 setTimeout(() => {
                     card.classList.add('map-highlight');
                 }, 100);
@@ -773,13 +812,9 @@
 
             function calculateTotal() {
                 let total = 0;
-
-                // 1. Camping Kosten
                 let isDayGuest = false;
                 campingRadios.forEach(radio => {
-                    if (radio.checked && radio.value === 'Tagesgast') {
-                        isDayGuest = true;
-                    }
+                    if (radio.checked && radio.value === 'Tagesgast') isDayGuest = true;
                 });
 
                 if (!isDayGuest) {
@@ -787,22 +822,90 @@
                     total += campingCount * 5;
                 }
 
-                // 2. Essen Kosten (3 Euro pro Nase)
                 foodInputs.forEach(input => {
                     const count = parseInt(input.value) || 0;
                     total += count * 3;
                 });
 
-                // Update Display
                 totalDisplay.value = total + " €";
             }
 
-            // Event Listeners
             form.addEventListener('input', calculateTotal);
-            
-            // Initial call
             calculateTotal();
         });
+
+        // E-MAIL SEND LOGIC
+        function sendMail() {
+            // Empfänger
+            const recipient = "bsg-segeln@gauselmann.de"; // HIER ANPASSEN FALLS NÖTIG
+            
+            // Formulardaten sammeln
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const campingAnzahl = document.getElementById('camping_anzahl').value;
+            const details = document.getElementById('unterkunft_details').value;
+            const totalCost = document.getElementById('total_cost_display').value;
+
+            // Anreise Radio
+            let anreise = "";
+            document.querySelectorAll('.camping-radio').forEach(r => {
+                if(r.checked) anreise = r.parentElement.innerText.trim();
+            });
+
+            // Tabelle parsen
+            let eventsText = "";
+            const rows = document.querySelectorAll('#activityTable tbody tr');
+            
+            rows.forEach(row => {
+                const labelCell = row.querySelector('td[data-label]');
+                const inputs = row.querySelectorAll('input[type="number"]');
+                
+                if (labelCell && inputs.length === 3) {
+                    const erw = inputs[0].value;
+                    const jgd = inputs[1].value;
+                    const kind = inputs[2].value;
+
+                    // Nur wenn irgendwo was eingetragen ist
+                    if ((erw && erw > 0) || (jgd && jgd > 0) || (kind && kind > 0)) {
+                        let eventName = labelCell.getAttribute('data-label');
+                        // Bereinigen des Labels für bessere Lesbarkeit
+                        eventsText += `- ${eventName}: ${erw || 0} Erw, ${jgd || 0} Jgd, ${kind || 0} Ki\n`;
+                    }
+                }
+            });
+
+            if (eventsText === "") eventsText = "(Keine spezifischen Events ausgewählt)\n";
+
+            // Email Body zusammenbauen
+            const subject = encodeURIComponent(`Anmeldung Sportwochenende 2026 - ${name}`);
+            const body = encodeURIComponent(
+`Hallo BSG-Team,
+
+hiermit melde ich mich verbindlich für das Sportwochenende 2026 an.
+
+--- PERSÖNLICHE DATEN ---
+Name: ${name}
+E-Mail: ${email}
+
+--- UNTERKUNFT ---
+Anreise/Status: ${anreise}
+Anzahl Camper: ${campingAnzahl}
+Details: ${details}
+
+--- PROGRAMM & ESSEN ---
+${eventsText}
+--- GESAMTKOSTEN ---
+Kalkuliert: ${totalCost}
+
+(Die Haftungserklärung und Datenschutzbestimmungen wurden im Formular akzeptiert.)
+
+Viele Grüße,
+${name}`
+            );
+
+            // Mailto Link öffnen
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+        }
     </script>
 
 </body>
