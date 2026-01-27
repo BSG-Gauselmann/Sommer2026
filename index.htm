@@ -931,7 +931,7 @@
                 </div>
 
                 <div style="margin-top:15px; font-size:0.9rem; color:#666; text-align:center;">
-                    Empfänger-Adresse: <strong>awittmann@adp-merkur.com</strong>
+                    Empfänger-Adressen: <strong>awittmann@adp-merkur.com, bsgkm@web.de</strong> + deine eigene E-Mail
                 </div>
             </div>
         </section>
@@ -1038,7 +1038,7 @@
             campKindInput.addEventListener('input', syncCampingToFood);
         });
 
-        const recipient = "awittmann@adp-merkur.com";
+        const baseRecipients = ["awittmann@adp-merkur.com", "bsgkm@web.de"];
         let finalMailBody = "";
 
         function prepareData() {
@@ -1092,9 +1092,15 @@ Haftung & Datenschutz akzeptiert.`;
 
         function forceMailOpen() {
             const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
             const subject = encodeURIComponent("Anmeldung SportWE - " + name);
             let bodyEncoded = encodeURIComponent(finalMailBody).replace(/\n/g, "%0D%0A");
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${bodyEncoded}`;
+
+            // Alle Empfänger: Base-Empfänger + Email des Anmelders
+            const allRecipients = [...baseRecipients, email];
+            const recipientString = allRecipients.filter(Boolean).join(';');
+
+            window.location.href = `mailto:${recipientString}?subject=${subject}&body=${bodyEncoded}`;
         }
 
         function copyToClipboard() {
