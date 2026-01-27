@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Impressum und Datenschutzerklärung der BSG Gauselmann">
+  <title>Impressum & Datenschutz - BSG Gauselmann</title>
+  <style>
+    :root {
+      --primary-color: #004b8d;
+      --accent-color: #ffcc00;
+      --text-color: #333;
+      --light-bg: #f8f9fa;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      line-height: 1.6;
+      background-color: #e9ecef;
+    }
+
+    /* HEADER */
+    header {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { font-size: 1.2rem; margin-top: 0.5rem; color: var(--accent-color); font-weight: bold; margin-bottom: 0; }
+
+    /* NAV */
+    nav {
+      background-color: #003366;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      display: inline-block;
+      color: var(--white);
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover { background-color: var(--accent-color); color: var(--primary-color); }
+    nav a.active { background-color: var(--accent-color); color: var(--primary-color); }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* SECTIONS */
+    section {
+      background-color: var(--white);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      margin-top: 0;
+      border-bottom: 3px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    section h3 { margin-top: 1.5rem; color: var(--primary-color); }
+
+    section p { margin: 0.8rem 0; }
+
+    /* LIST STYLES */
+    ul, ol {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    li { margin: 0.5rem 0; }
+
+    .contact-info {
+      background-color: var(--light-bg);
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent-color);
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+
+    .contact-info p { margin: 0.5rem 0; }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    footer p { margin: 0.5rem 0; }
+    footer a { color: var(--accent-color); }
+
+    /* PRINT */
+    @media print {
+      nav { display: none; }
+      section { page-break-inside: avoid; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.6rem; }
+      nav a { padding: 0.8rem 1rem; font-size: 0.85rem; }
+      section { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BSG MERKUR Gauselmann e.V.</h1>
+    <p>Impressum & Datenschutz</p>
+  </header>
+
+  <nav>
+    <a href="index.html">← Zurück zur Hauptseite</a>
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- IMPRESSUM -->
+    <section id="impressum">
+      <h2>Impressum</h2>
+      
+      <h3>Angaben nach § 5 TMG</h3>
+      
+      <div class="contact-info">
+        <p>
+          <strong>Betriebssportgemeinschaft MERKUR Gauselmann e.V.</strong><br>
+          Merkur Allee 1-15<br>
+          32339 Espelkamp<br>
+          Deutschland
+        </p>
+      </div>
+
+      <h3>Vertreter des Vereins</h3>
+      <p>
+        <strong>Vorsitzender:</strong> Claas Potthoff<br>
+        <strong>Stellvertretender Vorsitzender:</strong> Andre Chevalier<br>
+        <strong>Sportwart:</strong> Thorsten Schlegel
+      </p>
+
+      <h3>Handelsregister</h3>
+      <p>
+        <strong>Eintragung:</strong> Vereinsregister (VR)<br>
+        <strong>Registergericht:</strong> Amtsgericht Bad Oeynhausen<br>
+        <strong>Registernummer:</strong> VR 50305
+      </p>
+
+      <h3>Kontakt</h3>
+      <p>
+        <strong>Telefon:</strong> <a href="tel:+4957412732283">05741/273-2283</a><br>
+        <strong>E-Mail:</strong> <a href="mailto:cpotthoff@adp-merkur.com">cpotthoff@adp-merkur.com</a>
+      </p>
+
+      <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+      <p>
+        Betriebssportgemeinschaft MERKUR Gauselmann e.V.<br>
+        Merkur Allee 1-15<br>
+        32339 Espelkamp
+      </p>
+
+      <h3>Haftungshinweis</h3>
+      <p>
+        Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+      </p>
+    </section>
+
+    <!-- DATENSCHUTZ -->
+    <section id="datenschutz">
+      <h2>Datenschutzerklärung</h2>
+
+      <h3>1. Verantwortlicher für die Datenverarbeitung</h3>
+      <div class="contact-info">
+        <p>
+          <strong>Betriebssportgemeinschaft MERKUR Gauselmann e.V.</strong><br>
+          Merkur Allee 1-15<br>
+          32339 Espelkamp<br>
+          Vorsitzender: Claas Potthoff<br>
+          Datenschutzbeauftragter: <a href="mailto:datenschutzbeauftragter@adp-merkur.com">datenschutzbeauftragter@adp-merkur.com</a>
+        </p>
+      </div>
+
+      <h3>2. Erhobene Daten und Datenverarbeitung</h3>
+      <p>Wir verarbeiten folgende Kategorien von Daten:</p>
+      <ul>
+        <li><strong>Bestandsdaten:</strong> Namen, Adressen, Geburtsdatum</li>
+        <li><strong>Kontaktdaten:</strong> E-Mail-Adressen, Telefonnummern</li>
+        <li><strong>Inhaltsdaten:</strong> Texteingaben, Fotografien, Videos</li>
+        <li><strong>Nutzungsdaten:</strong> Besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten</li>
+        <li><strong>Meta-/Kommunikationsdaten:</strong> Geräte-Informationen, IP-Adressen</li>
+      </ul>
+
+      <h3>3. Kategorien betroffener Personen</h3>
+      <p>
+        Besucher und Nutzer unseres Online-Angebotes, insbesondere Mitglieder und Interessierte der BSG Gauselmann.
+      </p>
+
+      <h3>4. Zweck der Verarbeitung</h3>
+      <ul>
+        <li>Zurverfügungstellung des Online-Angebotes, seiner Funktionen und Inhalte</li>
+        <li>Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern</li>
+        <li>Verwaltung von Mitgliedschaften und Vereinstätigkeiten</li>
+        <li>Sicherheitsmaßnahmen und Missbrauchserkennung</li>
+        <li>Reichweitenmessung und Marketing</li>
+      </ul>
+
+      <h3>5. Rechtsgrundlagen</h3>
+      <p>
+        Die Verarbeitung Ihrer Daten erfolgt auf Grundlage folgender Rechtsgrundlagen nach der Datenschutzgrundverordnung (DSGVO):
+      </p>
+      <ul>
+        <li><strong>Art. 6 Abs. 1 lit. a DSGVO:</strong> Verarbeitung mit Ihrer Einwilligung</li>
+        <li><strong>Art. 6 Abs. 1 lit. b DSGVO:</strong> Verarbeitung zur Erfüllung von Verträgen und Mitgliedschaften</li>
+        <li><strong>Art. 6 Abs. 1 lit. c DSGVO:</strong> Verarbeitung zur Erfüllung rechtlicher Verpflichtungen</li>
+        <li><strong>Art. 6 Abs. 1 lit. f DSGVO:</strong> Verarbeitung zur Wahrung berechtigter Interessen</li>
+      </ul>
+
+      <h3>6. Speicherdauer und Löschung</h3>
+      <p>
+        Wir löschen Ihre Daten, sobald sie nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen. Nach deutschen Gesetzen beträgt die Aufbewahrungsfrist üblicherweise:
+      </p>
+      <ul>
+        <li>10 Jahre für geschäftsrelevante Unterlagen (§§ 147 Abs. 1 AO, 257 Abs. 1 HGB)</li>
+        <li>6 Jahre für Handelsbriefe und Geschäftsunterlagen (§ 257 Abs. 1 HGB)</li>
+      </ul>
+
+      <h3>7. Cookies</h3>
+      <p>
+        Diese Website verwendet technisch notwendige Cookies für die Funktionalität. Sie können Cookies in Ihren Browser-Einstellungen deaktivieren. Dies kann jedoch die Funktionalität dieser Website einschränken.
+      </p>
+
+      <h3>8. Sicherheitsmaßnahmen</h3>
+      <p>
+        Wir treffen technische und organisatorische Sicherheitsmaßnahmen, um Ihre personenbezogenen Daten vor Verlust, Zerstörung, Änderung und unbefugtem Zugriff zu schützen. Dies umfasst:
+      </p>
+      <ul>
+        <li>Verschlüsselte Übertragung von Daten</li>
+        <li>Sichere Speicherung und Zugriffskontrolle</li>
+        <li>Regelmäßige Überprüfung und Aktualisierung der Sicherheitsmaßnahmen</li>
+      </ul>
+
+      <h3>9. Ihre Rechte</h3>
+      <p>
+        Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:
+      </p>
+      <ul>
+        <li><strong>Auskunftsrecht (Art. 15 DSGVO):</strong> Sie können jederzeit Auskunft über gespeicherte Daten verlangen</li>
+        <li><strong>Berichtigungsrecht (Art. 16 DSGVO):</strong> Sie können unrichtige Daten berichtigen lassen</li>
+        <li><strong>Löschungsrecht (Art. 17 DSGVO):</strong> Sie können Löschung Ihrer Daten verlangen</li>
+        <li><strong>Einschränkungsrecht (Art. 18 DSGVO):</strong> Sie können Einschränkung der Verarbeitung verlangen</li>
+        <li><strong>Datenübertragbarkeit (Art. 20 DSGVO):</strong> Sie können Ihre Daten in einem strukturierten, gängigen Format erhalten</li>
+        <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können der Verarbeitung widersprechen</li>
+        <li><strong>Widerrufsrecht (Art. 7 Abs. 3 DSGVO):</strong> Sie können Ihre Einwilligung jederzeit widerrufen</li>
+        <li><strong>Beschwerde (Art. 77 DSGVO):</strong> Sie können bei einer Datenschutzbehörde Beschwerde einreichen</li>
+      </ul>
+
+      <h3>10. Kontakt zur Datenschutzbehörde</h3>
+      <p>
+        Zuständige Datenschutzbehörde ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen:<br><br>
+        <strong>Landesbeauftragte für Datenschutz NRW</strong><br>
+        Postfach 20 04 44<br>
+        40102 Düsseldorf<br>
+        Telefon: 0211 38424-0<br>
+        E-Mail: <a href="mailto:poststelle@ldi.nrw.de">poststelle@ldi.nrw.de</a>
+      </p>
+
+      <h3>11. Änderungen dieser Datenschutzerklärung</h3>
+      <p>
+        Wir behalten uns vor, diese Datenschutzerklärung zu ändern. Bitte besuchen Sie diese Seite regelmäßig, um über Änderungen auf dem Laufenden zu bleiben.
+      </p>
+
+      <p><em>Zuletzt aktualisiert: Januar 2026</em></p>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>
+        Für Fragen zum Datenschutz, zum Impressum oder für die Ausübung Ihrer Rechte kontaktieren Sie uns:
+      </p>
+      <div class="contact-info">
+        <p>
+          <strong>Telefon:</strong> <a href="tel:+4957412732283">05741/273-2283</a><br>
+          <strong>E-Mail (Allgemein):</strong> <a href="mailto:cpotthoff@adp-merkur.com">cpotthoff@adp-merkur.com</a><br>
+          <strong>E-Mail (Datenschutz):</strong> <a href="mailto:cpotthoff@adp-merkur.com">cpotthoff@adp-merkur.com</a>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 BSG MERKUR Gauselmann e.V. – Alle Rechte vorbehalten.</p>
+    <p>
+      <a href="index.html">Zur Hauptseite</a> | 
+      <a href="#impressum">Impressum</a> | 
+      <a href="#datenschutz">Datenschutz</a>
+    </p>
+  </footer>
+</body>
+</html>
