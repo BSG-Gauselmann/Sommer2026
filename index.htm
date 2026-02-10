@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anmeldung zum BSG Gauselmann Sportwochenende Himmelfahrt 2026">
+    <meta name="description" content="Anmeldung zum BSG Merkur Gauselmann Sportwochenende Himmelfahrt 2026">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛺</text></svg>">
     
-    <title>BSG Gauselmann - Sportwochenende 2026</title>
+    <title>BSG Merkur Gauselmann - Sportwochenende 2026</title>
     <style>
         :root {
             --primary-color: #004b8d;
@@ -211,7 +211,7 @@
             z-index: 100;
             box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2); 
         }
-        table.event-table th:first-child, table.event-table td:first-child { text-align: left; width: 50%; } /* Breitere Spalte für Text */
+        table.event-table th:first-child, table.event-table td:first-child { text-align: left; width: 50%; }
         table.event-table td { padding: 10px; border-bottom: 1px solid #eee; text-align: center; }
         table.event-table tr:nth-child(even) { background-color: #f9f9f9; }
         
@@ -337,7 +337,6 @@
         .box.canoe { background: #e0f7fa; border-color: #b2ebf2; }
         .box.archery { background: #fffde7; border-color: #fff9c4; }
         .box.minigolf { background: #e8f5e9; border-color: #c8e6c9; }
-        /* Sailing: make distinct from canoe & triathlon */
         .box.sailing { background: #ffe8f0; border-color: #f8bbd0; }
         .box.open { background: #eceff1; border-color: #cfd8dc; }
         .box.cooking { background: #fff3e0; border-color: #ffe0b2; }
@@ -360,49 +359,15 @@
 </style>
 </head>
 <body>
-<script>
-(function() {
-    var correctPassword = "Sommer26";
-    var maxAttempts = 3;
-    var attempts = 0;
-
-    function checkPassword() {
-        var password = prompt("Passwort eingeben:");
-        if (password === null) {
-            document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
-            return false;
-        }
-
-        if (password === correctPassword) {
-            return true;
-        } else {
-            attempts++;
-            if (attempts >= maxAttempts) {
-                document.body.innerHTML = "<h1>Zugriff verweigert - Zu viele Fehlversuche</h1>";
-                return false;
-            } else {
-                alert("Falsches Passwort. Versuch " + attempts + " von " + maxAttempts);
-                return checkPassword();
-            }
-        }
-    }
-
-    if (!checkPassword()) {
-        document.body.innerHTML = "<h1>Zugriff verweigert</h1>";
-    }
-})();
-</script>
-
 
     <header>
-        <h1>BSG Gauselmann</h1>
-        <div class="organizer-line">– Eine Veranstaltung der BSG Gauselmann e.V. –</div>
+        <h1>BSG Merkur Gauselmann</h1>
+        <div class="organizer-line">– Eine Veranstaltung der BSG Merkur Gauselmann e.V. –</div>
         
         <p>Sportwochenende Himmelfahrt 2026</p>
         <span>13. – 17. Mai 2026 | Hüde</span>
     </header>
 
-    <!-- Menü angepasst: Ausschreibungen vor Programm -->
     <nav>
         <a href="#ausschreibungen">Ausschreibungen</a>
         <a href="#programm">Programm</a>
@@ -412,12 +377,11 @@
 
     <div class="container">
 
-        <!-- INTRO -->
         <section>
             <h2>Herzlich Willkommen!</h2>
 
             <p class="welcome-text">
-                Liebe BSG Gauselmann Sportler,<br><br>
+                Liebe BSG Merkur Gauselmann Sportler,<br><br>
                 wir laden euch ein zu einem Wochenende voller Bewegung, frischer Luft und guter Laune am Dümmer See! 
                 Unser Motto lautet: <span class="highlight">"Alles kann, nichts muss."</span><br>
                 Egal ob ihr euch beim <strong>BSG Triathlon</strong> auspowern, 
@@ -438,7 +402,6 @@
             </div>
         </section>
 
-        <!-- AUSSCHREIBUNGEN / TOURBESCHREIBUNGEN -->
         <section id="ausschreibungen">
           <h2>Ausschreibungen &amp; Tourbeschreibungen</h2>
 
@@ -521,7 +484,6 @@
           </div>
         </section>
 
-        <!-- PROGRAMM -->
         <section id="programm">
             <h2>Tagesablauf</h2>
 
@@ -652,7 +614,7 @@
                             <td class="time-col">19:00</td>
                             <td class="empty">–</td>
                             <td class="food"><span class="box food"><span class="box-time">19:00</span><span class="ico">🍽️</span><strong>Essen</strong> bei Dani (2€)</span></td>
-                            <td class="food"><span class="box food"><span class="box-time">19:00</span><span class="ico">🔥</span><strong>Grillen</strong> (5€ / 3€)</span></td>
+                            <td class="food"><span class="box food"><span class="box-time">19:00</span><span class="ico">🔥</span><strong>Fischbrötchen</strong> (5€ / 3€)</span></td>
                             <td class="food"><span class="box food"><span class="box-time">19:00</span><span class="ico">🍕</span><strong>Pizzabuffet</strong> (5€ / 3€)</span></td>
                             <td class="empty">–</td>
                         </tr>
@@ -670,7 +632,6 @@
             </div>
         </section>
 
-        <!-- ORT -->
         <section id="ort">
             <h2>Ort &amp; Übernachtung</h2>
             
@@ -698,7 +659,6 @@
                 </div>
             </div>
 
-            <!-- KARTEN GALERIE -->
             <h3>Lagepläne &amp; Treffpunkte</h3>
             <div class="map-gallery">
                 <a href="https://www.google.com/maps/search/?api=1&query=52.49685,8.363849" target="_blank" class="map-link">
@@ -713,11 +673,9 @@
                         <div class="map-caption">Treffpunkt Schwimmen</div>
                     </div>
                 </a>
-
             </div>
         </section>
 
-        <!-- ANMELDUNG -->
         <section id="anmeldung">
             <h2>Anmeldung</h2>
 
@@ -731,7 +689,6 @@
                 Du kannst dich für das ganze Wochenende anmelden oder uns auch nur an einzelnen Tagen besuchen!
             </div>
 
-            <!-- Javascript gesteuertes Formular -->
             <form id="eventForm" onsubmit="event.preventDefault(); prepareData();">
                 
                 <div class="form-row">
@@ -857,7 +814,7 @@
                                 <td><input type="number" class="table-input" disabled placeholder="-"></td>
                                 <td><input type="number" class="table-input" disabled placeholder="-"></td>
                             </tr>
-                            <tr class="food-row"><td data-label="Fr Grillen">🔥 Grillen (5€ / 3€)</td><td><input id="dinner_fr_erw" type="number" class="table-input" min="0"></td><td><input id="dinner_fr_kind" type="number" class="table-input" min="0"></td></tr>
+                            <tr class="food-row"><td data-label="Fr Fischbrötchen">🔥 Fischbrötchen (5€ / 3€)</td><td><input id="dinner_fr_erw" type="number" class="table-input" min="0"></td><td><input id="dinner_fr_kind" type="number" class="table-input" min="0"></td></tr>
 
                             <tr><td colspan="3" class="table-section-header">Samstag 16.05.</td></tr>
                             <tr>
@@ -884,7 +841,7 @@
                             </tr>
 
                             <tr><td colspan="3" class="table-section-header">Sonntag 17.05.</td></tr>
-</tbody>
+                        </tbody>
                     </table>
                 </div>
 
@@ -894,7 +851,7 @@
                     <small style="color:#aaa;">Camping (10/5) + Essen (Fr/Sa: 5/3) + Dani (Do: 2€ pro Person)</small>
 
                     <div class="payment-instruction">
-                        Bitte den Betrag auf das Konto <strong>BSG Gauselmann</strong> überweisen.<br>
+                        Bitte den Betrag auf das Konto <strong>BSG Merkur Gauselmann</strong> überweisen.<br>
                         <strong>Betreff:</strong> Name der Anmeldung
                     </div>
                 </div>
@@ -902,18 +859,21 @@
                 <div class="disclaimer-box">
                     <label class="disclaimer-label">
                         <input type="checkbox" required>
-                        <span><strong>Pflichtfeld Haftung:</strong> Ich habe zur Kenntnis genommen, dass bei der Übernachtung mit Minderjährigen außerhalb der Sportangebote die Eltern/Erziehungsberechtigten die volle Aufsichtspflicht tragen. Den Anweisungen der Übungsleiter ist Folge zu leisten.</span>
+                        <span><strong>Pflichtfeld Haftung:</strong> Ich habe zur Kenntnis genommen, dass bei der Übernachtung mit Minderjährigen außerhalb der Sportangebote die Eltern/Erziehungsberechtigten die volle Aufsichtspflicht tragen. </span>
                     </label>
                     <label class="disclaimer-label">
                         <input type="checkbox" required>
                         <span><strong>Pflichtfeld Datenschutz:</strong> Ich stimme zu, dass meine Daten zur Organisation und Durchführung des Sportwochenendes elektronisch gespeichert und verarbeitet werden.</span>
+                    </label>
+                    <label class="disclaimer-label">
+                        <input type="checkbox" required>
+                        <span><strong>Einwilligung Fotos:</strong> Ich bin damit einverstanden, dass während des Events schöne Momente fotografisch festgehalten werden. Die Aufnahmen dürfen für den BSG-Rückblick sowie für interne Werbezwecke genutzt werden.</span>
                     </label>
                 </div>
 
                 <button type="submit" class="btn-submit">Anmelde-Text erstellen (nächster Schritt)</button>
             </form>
 
-            <!-- FALLBACK BOX -->
             <div id="email-fallback">
                 <h3>Dein Anmelde-Text ist fertig!</h3>
                 <p>Bitte wähle eine Option zum Versenden:</p>
@@ -931,7 +891,7 @@
                 </div>
 
                 <div style="margin-top:15px; font-size:0.9rem; color:#666; text-align:center;">
-                    Empfänger-Adressen: <strong>awittmann@adp-merkur.com, bsgkm@web.de</strong> + deine eigene E-Mail
+                    Empfänger-Adresse: <strong>awittmann@adp-merkur.com</strong>
                 </div>
             </div>
         </section>
@@ -956,11 +916,10 @@
                     <div style="margin-top:6px;"><a href="Impressum &amp; Datenschutz.html">Impressum &amp; Datenschutz</a></div>
                 </div>
             </div>
-            <p style="text-align:center;color:#666;margin:1rem 0 0;">&copy; 2026 BSG Gauselmann e.V.</p>
+            <p style="text-align:center;color:#666;margin:1rem 0 0;">&copy; 2026 BSG Merkur Gauselmann e.V.</p>
         </div>
     </footer>
 
-    <!-- LOGIK -->
     <script>
         function highlightCard(cardId) {
             document.querySelectorAll('.map-card').forEach(el => el.classList.remove('map-highlight'));
@@ -1038,7 +997,7 @@
             campKindInput.addEventListener('input', syncCampingToFood);
         });
 
-        const baseRecipients = ["awittmann@adp-merkur.com", "bsgkm@web.de"];
+        const recipient = "awittmann@adp-merkur.com";
         let finalMailBody = "";
 
         function prepareData() {
@@ -1083,7 +1042,36 @@ EVENTS / ESSEN:
 ${eventsTextFull}
 GESAMTKOSTEN: ${totalCost}
 
-Haftung & Datenschutz akzeptiert.`;
+Bitte überweisen an:
+Betriebssportgemeinschaft Merkur Gauselmann
+IBAN: DE29 4905 1065 0000 0423 17
+
+Haftung, Datenschutz & Foto-Einwilligung akzeptiert.`;
+
+            
+            // --- DATEN AN GOOGLE SHEETS SENDEN ---
+            const serverData = {
+                name: name,
+                email: email,
+                anreise: anreise,
+                countErw: countErw,
+                countKind: countKind,
+                details: details,
+                totalCost: totalCost,
+                eventsText: eventsTextFull.replace(/\n/g, " | ")
+            };
+
+            const googleScriptURL = "https://script.google.com/macros/s/AKfycbyMhwrYcto2IFDUi1z-EJ-YZFsetZOYH3qvAUkKd8eo6gbwK6YqXu1n87xjsnByw0OF/exec";
+
+            fetch(googleScriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(serverData)
+            })
+            .then(() => console.log("Daten an Google gesendet."))
+            .catch(error => console.error("Fehler beim Senden:", error));
+            // --- ENDE GOOGLE SHEETS ---
 
             document.getElementById('email-body-text').value = finalMailBody;
             document.getElementById('email-fallback').style.display = 'block';
@@ -1092,15 +1080,9 @@ Haftung & Datenschutz akzeptiert.`;
 
         function forceMailOpen() {
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             const subject = encodeURIComponent("Anmeldung SportWE - " + name);
             let bodyEncoded = encodeURIComponent(finalMailBody).replace(/\n/g, "%0D%0A");
-
-            // Alle Empfänger: Base-Empfänger + Email des Anmelders
-            const allRecipients = [...baseRecipients, email];
-            const recipientString = allRecipients.filter(Boolean).join(';');
-
-            window.location.href = `mailto:${recipientString}?subject=${subject}&body=${bodyEncoded}`;
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${bodyEncoded}`;
         }
 
         function copyToClipboard() {
